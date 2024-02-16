@@ -78,5 +78,30 @@ app.post('/messages/save', async (req, res) => {
   }
 })
 
+
+// const aboutData = {
+//   title: "About Us",
+//   content: [
+//     "Hello! My name is Owen Ou. I am a senior undergraduate student in NYU, majoring in Computer Science and Data Science.",
+//     "I like to play basketball when I am free. I am also into freediving. I play piano as well.",
+//     "Thank you!"
+//   ],
+//   image: "https://www.dropbox.com/scl/fi/2nzmt0g4xf6l9ybbhzl6a/.jpg?rlkey=xib7m7f0dathmudjf7jlvjdcw&dl=0"
+// };
+
+// app.get('/aboutUs', (req, res) => {
+//   res.json(aboutData);
+// });
+
+
+const data = {
+  image: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fliwen-ou-a178a624b&psig=AOvVaw0apvrELI27_gkdeSJTag3L&ust=1708137706368000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCNDAw6frroQDFQAAAAAdAAAAABAE",
+  content: "Hello! My name is Owen Ou. I am a senior undergraduate student in NYU, majoring in Computer Science and Data Science. I like to play basketball when I am free. I am also into freediving. I play piano as well. Thank you!"
+};
+
+app.get('/about_us', (req, res) => {
+  res.json(data);
+});
+
 // export the express app we created to make it available to other modules
 module.exports = app // CommonJS export style!
